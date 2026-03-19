@@ -189,7 +189,8 @@ const STATE_NAMES = {
   "ND":"north dakota","OH":"ohio","OK":"oklahoma","OR":"oregon","PA":"pennsylvania",
   "RI":"rhode island","SC":"south carolina","SD":"south dakota","TN":"tennessee",
   "TX":"texas","UT":"utah","VT":"vermont","VA":"virginia","WA":"washington",
-  "WI":"wisconsin","WV":"west virginia","WY":"wyoming","DC":"district of columbia"
+  "WI":"wisconsin","WV":"west virginia","WY":"wyoming","DC":"district of columbia",
+  "STATES":"all"
 };
 
 
