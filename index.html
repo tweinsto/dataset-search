@@ -2,14 +2,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SSDAN Dataset Explorer</title>
+<title>Dataset Explorer</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* standout clear button */
+#clearFiltersBtn{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#444;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+#clearFiltersBtn:hover{
+  background:#222;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>SSDAN Dataset Explorer</h1>
+  <h1>Dataset Explorer</h1>
 </header>
 
 <div class="layout">
@@ -17,40 +37,37 @@
   <!-- SIDEBAR -->
   <aside class="sidebar">
 
+    <!-- COLLECTION -->
     <div class="filter-section">
       <h3>Collection</h3>
       <select id="collectionTypeSelect">
-        <option value="">All</option>
-        <option value="main">Main</option>
+        <option value="main" selected>Main</option>
         <option value="trend">Trend</option>
         <option value="state">State Level</option>
       </select>
     </div>
 
-
+    <!-- YEAR -->
     <div class="filter-section">
       <h3>Year</h3>
-
       <select id="yearSelect">
-        <option value="">All</option>
-        <option value="2024">2024</option>
+        <option value="2024" selected>2024</option>
         <option value="2023">2023</option>
         <option value="2022">2022</option>
         <option value="2021">2021</option>
         <option value="2020">2020</option>
         <option value="2019">2019</option>
         <option value="2016">2016</option>
+        <option value="2012">2012</option>
         <option value="2010">2010</option>
         <option value="2008">2008</option>
       </select>
     </div>
 
-
+    <!-- TOPICS -->
     <div class="filter-section">
-      <h3>Topic </h3>
-
+      <h3>Topic</h3>
       <div id="topicFilters">
-
         <button class="topic-chip" data-topic="population">Population</button>
         <button class="topic-chip" data-topic="poverty">Poverty</button>
         <button class="topic-chip" data-topic="earnings">Earnings</button>
@@ -64,16 +81,12 @@
         <button class="topic-chip" data-topic="disability">Disability</button>
         <button class="topic-chip" data-topic="immigration">Immigration</button>
         <button class="topic-chip" data-topic="geography">Geography</button>
-
       </div>
-
     </div>
 
-
-
+    <!-- SEARCH -->
     <div class="filter-section">
       <h3>Search</h3>
-
       <input
         type="text"
         id="searchBox"
@@ -81,14 +94,16 @@
       >
     </div>
 
-  </aside>
+    <!-- CLEAR -->
+    <div class="filter-section">
+      <button id="clearFiltersBtn">Clear All Filters</button>
+    </div>
 
+  </aside>
 
   <!-- RESULTS -->
   <main>
-
     <div id="results"></div>
-
   </main>
 
 </div>
